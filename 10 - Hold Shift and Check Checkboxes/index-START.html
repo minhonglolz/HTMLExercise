@@ -12,7 +12,7 @@
             font-family: sans-serif;
             background: #ffc600;
         }
-        
+
         .inbox {
             max-width: 400px;
             margin: 50px auto;
@@ -20,26 +20,26 @@
             border-radius: 5px;
             box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
         }
-        
+
         .item {
             display: flex;
             align-items: center;
             border-bottom: 1px solid #F1F1F1;
         }
-        
+
         .item:last-child {
             border-bottom: 0;
         }
-        
+
         input:checked+p {
             background: #F9F9F9;
             text-decoration: line-through;
         }
-        
+
         input[type="checkbox"] {
             margin: 20px;
         }
-        
+
         p {
             margin: 0;
             padding: 20px;
@@ -98,7 +98,7 @@
 
     <script>
         ;
-        (function() {
+        (function () {
             const checkboxes = Array.from(
                 document.querySelectorAll('.inbox input[type="checkbox"]')
             )
@@ -111,7 +111,8 @@
                 if (this.checked) {
                     if (e.shiftKey && lastCheck !== null) {
                         let nowCheck = checkboxes.indexOf(this);
-                        checkboxes.slice(Math.min(lastCheck, nowCheck), Math.max(lastCheck, nowCheck)).forEach((input) => {
+                        checkboxes.slice(Math.min(lastCheck, nowCheck), Math.max(lastCheck, nowCheck)).forEach((
+                            input) => {
                             input.checked = true;
                         });
                     }
