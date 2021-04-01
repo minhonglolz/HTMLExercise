@@ -67,14 +67,15 @@
         </ul>
         <script>
             (function () {
-                let li = document.querySelectorAll('li');
-                let video = [...li]
-                    .map((item) => item.dataset.time)
+                const li = document.querySelectorAll('li');
+                let totalSec = [...li]
+                    .map((li) => li.dataset.time)
                     .map((time) => {
                         let [min, sec] = time.split(':');
                         return min * 60 + sec * 1;
                     })
-                    .reduce((prev, next) => prev + next, 0);
+                    .reduce((a, b) => a + b);
+                console.log(totalSec);
             })();
         </script>
     </body>

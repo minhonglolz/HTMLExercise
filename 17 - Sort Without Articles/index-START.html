@@ -59,9 +59,12 @@
                 'Anywhere But Here',
                 'An Old Dog',
             ];
+            function strip(bandName) {
+                return bandName.replace(/^(a |the |an )/i, '').trim();
+            }
 
             bands.sort();
-            document.getElementById('bands').innerHTML = bands.map((bands) => `<li>${bands}</li>`).join('');
+            document.getElementById('bands').innerHTML = bands.map((band) => `<li>${band}</li>`).join('');
         </script>
     </body>
 </html>
